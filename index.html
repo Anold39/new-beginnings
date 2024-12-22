@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday blessings</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .page {
+            display: none;
+            min-height: 100vh; /* Changed from height to min-height */
+            color: white;
+            text-align: center;
+            padding: 120px; /* Adjusted padding */
+            background-size: cover;
+            background-position: center;
+        }
+        #home {
+            background-image: url('Prosperity.jpg');
+        }
+        #christmas {
+            background-image: url('Purity.jpg');
+        }
+        #newyear {
+            background-image: url('Wisdom.jpg'); 
+        }
+        h1 {
+            font-size: 2.5rem; /* Changed from 3em to rem */
+            margin: 20px 0; /* Adjusted margin */
+            font-weight: bolder;
+        }
+        .h1a {
+            color: black; 
+        }
+        .h1b {
+            color: black;
+        }
+        p {
+            font-size: 1.2rem; /* Changed from 1.5em to rem */
+            font-weight: bolder;
+        }
+      
+        blockquote {
+            color: black;
+            font-size: larger;
+            font-weight: bolder;
+        }
+        .blockquote{
+            color: red;
+            font-size: larger;
+            font-weight: bolder;
+        }
+        .p2 {
+            color: black;
+        }
+        .p3 {
+            color: blue;
+            font-size: larger;
+            font-weight: bolder;
+        }
+        nav {
+            display: flex;
+            flex-wrap: wrap; /* Allow buttons to wrap */
+            justify-content: center;
+            gap: 10px;
+            position: absolute;
+            top: 20px;
+            width: 100%;
+        }
+        nav button {
+            padding: 10px 15px; /* Increased padding for better tap area */
+            font-size: 1rem; /* Responsive font size */
+            font-weight: bold;
+            cursor: pointer;
+            background-color: white;
+            border: none;
+            color: black;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: black;
+            color: red; /* Change text color on hover */
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+        button:active {
+            opacity: 0.8;
+        }
+        nav :hover {
+            text-decoration: none;
+            color: white; 
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem; /* Adjust for smaller screens */
+            }
+            p {
+                font-size: 1rem; /* Adjust for smaller screens */
+            }
+            nav button {
+                padding: 10px 15px; /* Adjust button padding for smaller screens */
+            }
+        }
+    </style>
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.style.display = 'none';
+            });
+            document.getElementById(pageId).style.display = 'block';
+        }
+        window.onload = function() {
+            showPage('home'); // Show the home page on load
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('christmas')">Christmas Message</button>
+        <button onclick="showPage('newyear')">New Year Message</button>
+    </nav>
+    
+    <div id="home" class="page">
+        <h1 class="h1b">Cheers to Happy Holidays!</h1>
+        <p class="p3">Season's greetings!<br> As we embrace this joyful season, we invite you to explore our special messages for Christmas and the New Year.<br>
+             Let the spirit of joy, love, and togetherness fill your hearts as you navigate through our pages.<br>
+              Wishing you and your loved ones a wonderful holiday season!</p>
+        <p class="p2"><small>Click on the buttons above to view our messages.</small></p>
+    </div>
+    
+    <div id="christmas" class="page">
+        <h1>Merry Christmas!</h1>
+        <p><blockquote class="blockquote"><strong>"As we gather to celebrate this beautiful season, may your hearts be filled with love, joy, and peace.<br>
+             Let us cherish the moments spent with family and friends, and spread kindness to everyone around us.<br>
+              May the spirit of Christmas bring warmth to your home and happiness to your hearts.<br>
+               Wishing you all a festive holiday filled with laughter, cherished memories, and the comfort of loved ones." </strong>
+        </blockquote></p>
+    </div>
+    
+    <div id="newyear" class="page">
+        <h1 class="h1a">Happy New Year 2025!</h1>
+        <p><blockquote><strong>"As we step into a new year, let us embrace fresh beginnings and endless possibilities.<br>
+             May 2025 be a year filled with hope, health, and prosperity for you and your loved ones.<br>
+              Let's carry forward the lessons learned and the memories made, and strive to create a brighter future together.<br>
+              Cheers to new adventures, strong bonds, and the joy of togetherness. Here's to a fantastic year ahead!"</strong></blockquote></p>
+    </div>
+</body>
+</html>
